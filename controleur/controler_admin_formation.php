@@ -6,5 +6,5 @@ if(htmlspecialchars($_GET['emploie'])){
      $_SESSION['MEmploie'] = getEmploie(htmlspecialchars($_GET['emploie']));
      $_SESSION['MFormation'] = getFormation(htmlspecialchars($_GET['emploie']));
     
-     header('location: ../admin_manager.php');
+     header("location: ../admin_manager.php?id=".$_GET['emploie']);
 }

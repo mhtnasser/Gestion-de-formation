@@ -101,5 +101,13 @@ class ManagerAdmin{
 		 return $req->rowCount();
 	}
 
+	public function getFormations($id)
+	{	
+		$req = $this->_bdd->prepare('SELECT a.id_formation AS id_forme, e.nom AS nom_p, a.id AS id_active, f.nom_formation AS nom_f, a.status AS statuts_a, a.date_act AS date_actuelle FROM emploie AS e INNER JOIN for_active AS a ON e.id = a.id_emploie INNER JOIN formation AS f ON a.id_formation = f.id WHERE a.id_emploie = :id');
+		$req->execute(array(
+		    ':id' => $id));
 
+		$resultat = $req->fetchAll(PDO::FETCH_ASSOC);
+		return $resultat;
+	}
 }

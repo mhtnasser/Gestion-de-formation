@@ -50,8 +50,8 @@
                       	<td><?= $donne['nom_p'] ?></td>
                         <?php if(!$donne['statuts_a'] == 1) { ?>
                         <td>
-                        <?= '<a href="controleur/controle_gestion.php?accepte='.$donne['id_active'].'"><button type="button" class="btn btn-success">'. "Accepté".'</button></a>' ?>
-                        <?= '<a href="controleur/controle_gestion.php?refuse='.$donne['id_active'].'"><button type="button" class="btn btn-danger">'. "Refuse".'</button></a>' ?>
+                        <?= '<a href="controleur/controle_gestion.php?accepte='.$donne['id_active'].'&id='.htmlspecialchars($_GET['id']).'"><button type="button" class="btn btn-success">'. "Accepté".'</button></a>' ?>
+                        <?= '<a href="controleur/controle_gestion.php?refuse='.$donne['id_active'].'&id='.htmlspecialchars($_GET['id']).'"><button type="button" class="btn btn-danger">'. "Refuse".'</button></a>' ?>
                         </td>
                       	<?php 
                         }
