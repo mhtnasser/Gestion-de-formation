@@ -1,6 +1,8 @@
 body{
   padding:0;
   margin:0;
+  background-image: url("data:image/jpeg;base64,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");
+  background-size: cover;
 }
 
 .vid-container{
@@ -52,23 +54,29 @@ body{
   width:300px;
   margin:20px auto;
   padding:15px;
-  background:rgba(0,0,0,0.2);
+  background:rgba(0,0,0,.5);
   color:#fff;
   border:0;
+  border-radius:5px;
+  /*border: 1px dotted #5bc0de;*/
 }
 .box input:focus,.box input:active,.box button:focus,.box button:active{
   outline:none;
 }
-.box button{
-  background:#742ECC;
-  border:0;
-  color:#fff;
-  padding:10px;
-  font-size:20px;
-  width:330px;
-  margin:20px auto;
-  display:block;
-  cursor:pointer;
+.box button {
+  background: #5bc0de;
+  border: 0;
+  color: #005c7c;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  width: 300px;
+  margin: 20px auto;
+  display: block;
+  cursor: pointer;
+  font-family: cursive;
+  border: 1px dotted white;
+  border-radius: 5px;
 }
 .box button:active{
   background:#27ae60;
@@ -80,4 +88,218 @@ body{
 .box p span{
   cursor:pointer;
   color:#666;
+}
+.logo img {
+  width: 20%;
+  margin-left: 150px;
+}
+.msg-warging {
+  text-align: center;
+  width: 160px;
+  margin-left: 110px;
+  background-color: rgba(250, 255, 189, 0.55);
+  color: red;
+  padding: 3px;
+  border: 1px solid;
+  border-radius: 5px;
+  font-size: 13px;
+  font-family: monospace;
+  font-weight: 600;
+}
+.login-admin {
+  text-align: center;
+  color: #005c7c;
+}
+.login-admin span {
+  display: inline-block;
+  background: #2f96b4;
+  padding: 3px;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+.login-admin span a {
+  color: white;
+  font-size: 14px;
+}
+
+/***** ADD CSS ADMIN ******/
+
+
+/***** ADD CSS ADMIN ******/
+.zone-img{
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+
+#login-button{
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30px;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(3,3,3,.8);
+  overflow: hidden;
+  opacity: 0.4;
+  box-shadow: 10px 10px 30px #000;}
+
+/* Login container */
+#container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 260px;
+  height: 300px;
+  border-radius: 5px;
+  background: rgba(3,3,3,0.25);
+  box-shadow: 1px 1px 50px #000;
+  display: none;
+}
+
+.close-btn{
+  position: absolute;
+  cursor: pointer;
+  font-family: 'Open Sans Condensed', sans-serif;
+  line-height: 18px;
+  top: 3px;
+  right: 3px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 10px;
+  opacity: .2;
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.close-btn:hover{
+  opacity: .5;
+}
+
+/* Heading */
+.zone-title{
+  font-family: 'Open Sans Condensed', sans-serif;
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 40px;
+  color: #ddd;
+  text-shadow: 3px 3px 10px #000;
+  width: 150px;
+}
+
+/* Inputs */
+
+.zone-champ-text{
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-decoration: none;
+  position: relative;
+  width: 80%;
+  display: block;
+  margin: 9px auto;
+  font-size: 17px;
+  color: #fff;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  background: rgba(3,3,3,.1);
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.zone-champ-text:focus{
+  outline: none;
+  box-shadow: 3px 3px 10px #333;
+  background: rgba(3,3,3,.18);
+}
+/* Link */
+a{
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-align: center;
+  padding: 4px 8px;
+  background: rgba(107,255,3,0.3);
+}
+
+a:hover{
+  opacity: 0.7;
+}
+
+#remember-container{
+  position: relative;
+  margin: -5px 20px;
+}
+
+#remember{
+  position: absolute;
+  font-size: 14px;
+  font-family: monospace, sans-serif;
+  color: #fcf8e3;
+  top: 11px;
+  left: 8px;
+  font-weight: 500;
+}
+
+#forgotten{
+  position: absolute;
+  font-size: 12px;
+  font-family: 'Hind', sans-serif;
+  color: #333;
+  right: 0px;
+  top: 6px;
+  cursor: pointer;
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  width: 55px;
+  background-color: white;
+  border: 2px dotted #ccc;
+  border-radius: 10px; 
+  padding: 5px;
+  text-align: center;
+}
+
+#forgotten:hover{
+  color: rgba(255,255,255,.6);
+}
+
+/***** ADD CSS ADMIN ******/
+
+/***** ADD CSS ADMIN ******/
+
+.msg-warging-admin {
+  text-align: center;
+  width: 160px;
+  margin-left: 110px;
+  background-color: rgba(250, 255, 189, 0.55);
+  color: red;
+  padding: 3px;
+  border: 1px solid;
+  border-radius: 5px;
+  font-size: 13px;
+  font-family: monospace;
+  font-weight: 600;
+  margin: auto;
+}
+.bgvid{
+  /*position:absolute;*/
+  left:0;
+  top:0;
+  width:100%;
+  height: 500px;
 }
