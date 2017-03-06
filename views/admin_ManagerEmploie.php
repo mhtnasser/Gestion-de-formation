@@ -93,7 +93,7 @@
 		}
     
 ?>
-<a href="profil_admin.php">Retour</a>
+<a href="profil/admin">Retour</a>
 <br>
 <br>
 <br>

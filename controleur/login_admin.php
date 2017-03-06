@@ -12,7 +12,7 @@ if(isset($_POST['nom_admin']) AND isset($_POST['mdp_admin']))
 
 		if(empty($nom_admin) AND empty($mdp_admin))
 		{
-		    header('Location: ../index_admin.php?error=notset');
+		    header('Location: ../home/admin/notset');
 		}
 		else
 		{
@@ -25,7 +25,7 @@ if(isset($_POST['nom_admin']) AND isset($_POST['mdp_admin']))
        
 			    if(!$resultat)
 			    {
-			    	header('Location: ../index_admin.php?error=inconnu');	
+			    	header('Location: ../home/admin/inconnu');	
 			    }else
 			    {
 			    	$_SESSION['id_admin'] = $resultat['id'];

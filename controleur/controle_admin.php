@@ -13,4 +13,5 @@ $_SESSION['MesEmploie'] = $my->MesEmploie($resultat['titre_admin']);
 
 
 
-header('location: ../profil_admin.php');
+header('location: ../profil/admin');
+//profil_admin.php

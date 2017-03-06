@@ -1,0 +1,13 @@
+RewriteEngine On
+
+RewriteRule ^home$ index.php
+RewriteRule ^home/(notset)$ index.php?error=$1
+RewriteRule ^home/(inconnu)$ index.php?error=$1
+RewriteRule ^profil$ profil.php
+RewriteRule ^formation/([0-9]+)$ formation.php?formation=$1
+RewriteRule ^formation/([0-9]+)/([a-z]+)$ formation.php?formation=$1&msg=$2
+RewriteRule ^cour/([0-9]+)$ cour.php?cour=$1
+RewriteRule ^home/admin$ index_admin.php
+RewriteRule ^home/admin/(notset)$ index_admin.php?error=$1
+RewriteRule ^home/admin/(inconnu)$ index_admin.php?error=$1
+RewriteRule ^profil/admin$ profil_admin.php

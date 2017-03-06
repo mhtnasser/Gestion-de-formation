@@ -106,7 +106,7 @@
                         {
                           echo "<td><p>Deja inscrit</p></td>";
                         }else  {
-                          echo "<td> ".'<a href="formation.php?formation='.$formation['id_formation'].'"><button type="button" class="btn btn-success">Demande</button></a>'."</td>";
+                          echo "<td> ".'<a href="formation/'.$formation['id_formation'].'"><button type="button" class="btn btn-success">Demande</button></a>'."</td>";
                         }
 
                   $i=0;
@@ -139,7 +139,7 @@
                   echo "<td>En Attente</td>";
                   break;
                 case 1:
-                 echo "<td> ".'<a href="cour.php?cour='.$donne['id_active'].'"><button type="button" class="btn btn-primary">Cours</button></a>'."</td>";
+                 echo "<td> ".'<a href="cour/'.$donne['id_active'].'"><button type="button" class="btn btn-primary">Cours</button></a>'."</td>";
                   break;
                 case 2:
                   echo "<td>Refuse</td>";

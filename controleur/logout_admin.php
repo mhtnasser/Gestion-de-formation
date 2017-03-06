@@ -4,4 +4,4 @@ session_destroy();
 
 $_SESSION = [];
 
-header('location: ../index_admin.php');
+header('location: ../home/admin');

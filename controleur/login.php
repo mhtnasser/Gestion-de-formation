@@ -10,7 +10,8 @@ if(isset($_POST['username']) AND isset($_POST['password'])){
 	$pass = $_POST['password'];
 
 		if(empty($user) AND empty($pass)){
-		    header('Location: ../index.php?error=notset');
+		    header('Location: ../home/notset');
+		    //index.php?error=notset
 		}
 		else{
 		    $user_Majuscule = strtoupper($user);
@@ -28,7 +29,8 @@ if(isset($_POST['username']) AND isset($_POST['password'])){
 		    $resultat = findUser($user_Majuscule, $pass_sha);
        
 			    if(!$resultat){
-			    	header('Location: ../index.php?error=inconnu');	
+			    	header('Location: ../home/inconnu');	
+			    	//index.php?error=inconnu
 			    }else{
 			    	
 			    	$_SESSION['id'] = $resultat['id'];
