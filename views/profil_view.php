@@ -1,33 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Social Network Profile Header - CodePen</title>
-    <script>
-        function showHint() {
-            var xmlhttp = new XMLHttpRequest();
-            var myElement = document.getElementById("entre");
-            xmlhttp.open("GET", "modele/recup.php?formation=" + myElement.innerHTML, true);
-            xmlhttp.send();
-            xmlhttp.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
-                    for(item in this.response)
-                    {
-                        console.log(item['nom_formation']);
-                    }
-                }
-            };
-        }
-        showHint();
-
-
-    </script>
-</head>
-
-<body>
-
-  <h1><img src="img/Profile_banner_1.png" /> <small>A social network for programmers.</small></h1>
-  <header>
+  <header class="profile-header">
     <figure class="profile-banner">
       <img src="img/Profile.jpg" alt="Profile banner" />
     </figure>
@@ -53,7 +24,7 @@
         </a>
 
       </div>
-      <h1><?= $_SESSION['nom'] ?> <small><?= $_SESSION['prenom'] ?></small></h1>
+      <h1 class="profile-name"><?= $_SESSION['nom'] ?> <small class="profile-first_name"><?= $_SESSION['prenom'] ?></small></h1>
   </header>
 
   <section>
@@ -66,9 +37,9 @@
         
         <thead>
          <tr>
-           <th>Nom</th>
+           <th>Formation</th>
            <th>Dure</th>
-           <th>La Date</th>
+           <th>Date debut</th>
            <th>Lieux</th>
            <th>Pre-requis</th>
            <th>prix</th>
@@ -77,7 +48,7 @@
         </thead>
 
 <tbody>
-      <?php
+       <?php
               $reponse = $_SESSION['listeFormation'];
               $i = 0;
               $lien = '';
@@ -112,7 +83,7 @@
                   $i=0;
                   echo "</tr>";               
                 }
-      ?> 
+      ?>  
 </tbody>
 </table>
 </div>
@@ -123,8 +94,8 @@
             <tr>
               <th>Nom</th>
               <th>Formation</th>
-              <th>Status</th>
-              <th>Date de Fin</th>
+              <th>Statut</th>
+              <th>Envoie le</th>
             </tr>
           </thead>
           <tbody>
@@ -139,7 +110,7 @@
                   echo "<td>En Attente</td>";
                   break;
                 case 1:
-                 echo "<td> ".'<a href="cour/'.$donne['id_active'].'"><button type="button" class="btn btn-primary">Cours</button></a>'."</td>";
+                 echo "<td> ".'<a href="cour/'.$donne['id_active'].'"><button type="button" class="btn btn-primary">Valide</button></a>'."</td>";
                   break;
                 case 2:
                   echo "<td>Refuse</td>";
@@ -161,8 +132,5 @@
 
 
 
-</body>
-
-</html>
 
   

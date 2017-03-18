@@ -26,20 +26,22 @@ if(isset($_POST['username']) AND isset($_POST['password'])){
 		        'pseudo' => $user_Majuscule,
 		        'pass' => $pass_sha));*/
            
-		    $resultat = findUser($user_Majuscule, $pass_sha);
-       
-			    if(!$resultat){
-			    	header('Location: ../home/inconnu');	
-			    	//index.php?error=inconnu
-			    }else{
-			    	
-			    	$_SESSION['id'] = $resultat['id'];
-			    	$_SESSION['pseudo'] = $user_Majuscule;
-			    	
-					//redirection vers sons profil
-					header('Location: controle_profil.php');
+	        $resultat = findUser($user_Majuscule, $pass_sha);
+   
+		    if(!$resultat){
+		    	header('Location: ../home/inconnu');	
+		    	//index.php?error=inconnu
+		    }else{
+		    	
+		    	$_SESSION['id'] = $resultat['id'];
+		    	$_SESSION['pseudo'] = $user_Majuscule;
+		    	
+				//redirection vers sons profil
+				header('Location: controle_profil.php');
 
-			    }
+				setcookie("name_save", $user, (time() + 3600), '/');  /* expire dans 1 heure */
+		    	setcookie("password_save", $pass, (time() + 3600), '/');  /* expire dans 1 heure */
+		    }
 
 		}
 }
