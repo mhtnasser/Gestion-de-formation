@@ -3,6 +3,7 @@
 //la date d’aujourd’hui au format Jour-Mois-Année
 $dateDuJour = date('d-m-Y');
 
+art('o)
 var_dump($dateDuJour);
 //Conversion en objet Datetime
 $date = \DateTime::createFromFormat('d-m-Y', $dateDuJour);

@@ -3,8 +3,8 @@
       <img src="img/Profile.jpg" alt="Profile banner" />
     </figure>
 
-    <figure class="profile-picture" 
-      style="background-image: url('http://us.123rf.com/450wm/naschy/naschy1601/naschy160100004/50911396-illustration-vecteur-de-happy-little-girl-avec-cheveux-blonds-en-chemise-bleue-cartoon-profil-du-per.jpg?ver=6')">
+    <figure class="profile-picture">
+      <?= '<img src="img/Profil/'.$_SESSION['id'].'.png">' ?>
     </figure>
 
       <div class="profile-stats">

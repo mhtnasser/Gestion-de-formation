@@ -28,11 +28,7 @@
            <h2>Liste de tout les emploie du service <?= $donne['titre_admin'] ?></h2>
            <div class="box-list-profile">
            
-          <?php
-
- $reponse = $_SESSION['MEmploie'];
-
- ?>
+          <?php $reponse = $_SESSION['MEmploie']; ?>
       
       <table class="table table-hover">
         <thead>
@@ -42,6 +38,7 @@
             <th>Jour Disponible</th>
             <th>Credit Actuelle</th>
             <th>Secteur D'activite</th>
+            <th>Derniere connecxion</th>
           </tr>
         </thead>
         <tbody>
@@ -51,6 +48,7 @@
             <td><?= $reponse['jour'] ?></td>
             <td><?= $reponse['credit'] ?></td>
             <td><?= $reponse['titre'] ?></td>
+            <td><?= $reponse['lastLogin'] ?></td>
           </tr>
         </tbody>
       </table>

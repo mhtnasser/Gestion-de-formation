@@ -35,7 +35,7 @@ if(isset($_POST['username']) AND isset($_POST['password'])){
 		    	
 		    	$_SESSION['id'] = $resultat['id'];
 		    	$_SESSION['pseudo'] = $user_Majuscule;
-		    	
+		    	derniereConnexion($_SESSION['id']);
 				//redirection vers sons profil
 				header('Location: controle_profil.php');
 

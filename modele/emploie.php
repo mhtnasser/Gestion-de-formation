@@ -9,7 +9,7 @@ include('../data_base/data_base.php');
 		$bdd = new Base();
 		$bdd = $bdd->connexion();
 		
-		$req = $bdd->prepare('SELECT e.nom AS nom_emploie, e.prenom AS prenom_emploie, e.jour AS jour, e.credit AS credit, s.titre AS titre FROM emploie AS e INNER JOIN service AS s ON e.id_service = s.id WHERE e.id = :id_emploie');
+		$req = $bdd->prepare('SELECT e.nom AS nom_emploie, e.prenom AS prenom_emploie, e.jour AS jour, e.credit AS credit, e.lastLogin, s.titre AS titre FROM emploie AS e INNER JOIN service AS s ON e.id_service = s.id WHERE e.id = :id_emploie');
 		$req->execute(array(
 		    'id_emploie' => $id));
 
@@ -59,6 +59,14 @@ include('../data_base/data_base.php');
 		return $resultat;
 	}
 
+    function derniereConnexion($id)
+    {
+    	$bdd = new Base();
+    	$bdd = $bdd->connexion();
 
+    	$req = $bdd->prepare('UPDATE emploie SET lastLogin = NOW() WHERE id = :id');
+    	$req->execute(array(
+    		':id' => $id));
+    }
 
 

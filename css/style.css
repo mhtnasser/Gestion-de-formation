@@ -23,7 +23,7 @@
   z-index:  1;
 }
 
-.profile-picture {
+.profile-picture img{
   background-position: center center;
   background-size: cover;
   border: 5px #efefef solid;
