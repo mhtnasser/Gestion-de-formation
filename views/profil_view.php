@@ -110,10 +110,13 @@
                   echo "<td>En Attente</td>";
                   break;
                 case 1:
-                 echo "<td> ".'<a href="cour/'.$donne['id_active'].'"><button type="button" class="btn btn-primary">Valide</button></a>'."</td>";
+                  echo "<td> ".'<a href="cour/'.$donne['id_active'].'"><button type="button" class="btn btn-primary">Valide</button></a>'."</td>";
                   break;
                 case 2:
                   echo "<td>Refuse</td>";
+                  break;
+                case 3:
+                  echo "<td>Effectuer</td>";
                   break;
                 default:
                   echo "error";
