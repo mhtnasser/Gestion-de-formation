@@ -28,26 +28,60 @@
   </header>
 
   <section>
+  <div class="container">
   <div class="row">
-    <div class="container">
-        <p>REPONSE : <span id="txtHint"></span></p>
-    <!--table de tout les formation -->
-<div class="col-md-6">
-<table class="table table-hover">
-        
-        <thead>
-         <tr>
-           <th>Formation</th>
-           <th>Dure</th>
-           <th>Date debut</th>
-           <th>Lieux</th>
-           <th>Pre-requis</th>
-           <th>prix</th>
-           <th>Demande</th>
-         </tr>
-        </thead>
+    
+  <!--table de tout les formation a la quel un emploie est inscrit -->
+<div class="col-md-8">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Formation</th>
+        <th>Statut</th>
+        <th>Envoie le</th>
+      </tr>
+    </thead>
 
-<tbody>
+    <tbody>
+      <?php foreach ($_SESSION['ma_formation'] as $donne) : ?>
+        <tr>
+        <td><?= $donne['nom_p']?></td>
+        <td><?= $donne['nom_f'] ?></td>
+      <?php 
+        switch ($donne['statuts_a'])
+        {
+          case 0:
+            echo "<td>En Attente</td>";
+            break;
+          case 1:
+            echo "<td> ".'<a href="cour/'.$donne['id_active'].'"><button type="button" class="btn btn-primary">Valide</button></a>'."</td>";
+            break;
+          case 2:
+            echo "<td>Refuse</td>";
+            break;
+          case 3:
+            echo "<td>Effectuer</td>";
+            break;
+          default:
+            echo "error";
+            break;
+        }
+      ?>
+        <td><?= $donne['date_actuelle'] ?></td>
+        </tr>
+      <?php endforeach ?>
+    </tbody>
+  </table>
+</div>
+  <!-- END table de tout les formation a la quel un emploie est inscrit -->
+  <!-- ESPACE PUB -->
+  <div class="pub col-md-4"></div>
+  <!-- END ESPACE PUB -->
+  <!--table de tout les formation -->
+<div class="col-md-12">
+<div class="row table-content-form">
+        
        <?php
               $reponse = $_SESSION['listeFormation'];
               $i = 0;
@@ -56,13 +90,14 @@
                 //boucle pour affiche tout les formations
                 foreach ($reponse as $formation) 
                 {
-                  echo  "<tr>";
-                  echo  "<td> ".$formation['nom_formation']."</td>".
-                        "<td> ".$formation['dure_formation']."</td>".
-                        "<td> ".$formation['date_formation']."</td>".
-                        "<td> ".$formation['lieux']."</td>".
-                        "<td> ".$formation['pre_requis']."</td>".
-                        "<td> ".$formation['prix_formation']."</td>";
+                  echo  '<div class="table-info-form col-md-4 col-sm-5">';
+                  echo  '<div class="item-logo"> <img src="img/'.$formation['id_formation'].'.png" sizes="(max-width: 150px) 100vw, 150px"/></div>'.
+                        '<div class="item-forms form-nom"> '.$formation['nom_formation'] .'</div>'.
+                        '<div class="item-form" >'          .$formation['dure_formation'].'</div>'.
+                        '<div class="item-form" >'          .$formation['date_formation'].'</div>'.
+                        '<div class="item-form" >'          .$formation['lieux']         .'</div>'.
+                        '<div class="item-form" >'          .$formation['pre_requis']    .'</div>'.
+                        '<div class="item-form" >'          .$formation['prix_formation'].'</div>';
                         //boucle pour enleve le boutton demande pour les formation a la quel on ne deja inscript
                         foreach ($_SESSION['ma_formation'] as $donne)
                         {
@@ -75,61 +110,18 @@
 
                         if($i == 1)
                         {
-                          echo "<td><p>Deja inscrit</p></td>";
+                          echo '<div class="item-form-valide"><p>Deja inscrit</p></div>';
                         }else  {
-                          echo "<td> ".'<a href="formation/'.$formation['id_formation'].'"><button type="button" class="btn btn-success">Demande</button></a>'."</td>";
+                          echo '<div class="item-form-valide"> '.'<a href="formation/'.$formation['id_formation'].'"><button type="button" class="btn btn-success">Demande</button></a>'."</div>";
                         }
 
                   $i=0;
-                  echo "</tr>";               
+                  echo "</div>";               
                 }
       ?>  
-</tbody>
-</table>
 </div>
-<!--table de tout les formation a la quel un emploie est inscrit -->
-    <div class="col-md-6">
-    <table class="table table-hover">
-          <thead>
-            <tr>
-              <th>Nom</th>
-              <th>Formation</th>
-              <th>Statut</th>
-              <th>Envoie le</th>
-            </tr>
-          </thead>
-          <tbody>
-            <?php foreach ($_SESSION['ma_formation'] as $donne) : ?>
-              <tr>
-              <td><?= $donne['nom_p']?></td>
-              <td><?= $donne['nom_f'] ?></td>
-            <?php 
-              switch ($donne['statuts_a'])
-               {
-                case 0:
-                  echo "<td>En Attente</td>";
-                  break;
-                case 1:
-                  echo "<td> ".'<a href="cour/'.$donne['id_active'].'"><button type="button" class="btn btn-primary">Valide</button></a>'."</td>";
-                  break;
-                case 2:
-                  echo "<td>Refuse</td>";
-                  break;
-                case 3:
-                  echo "<td>Effectuer</td>";
-                  break;
-                default:
-                  echo "error";
-                  break;
-                }
-            ?>
-              <td><?= $donne['date_actuelle'] ?></td>
-              </tr>
-            <?php endforeach ?>
-          </tbody>
-    </table>
-    </div>
-    </div>
+</div>
+</div>
   </div>
 </section>
 

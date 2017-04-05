@@ -435,8 +435,46 @@ a.mail-dropdown {
 .box-list-profile .profil-contain .profil-name {
     text-align: center;
     font-size: 18px;
-    font-family: "Rubik";
+    font-family: 'Rubik', sans-serif;
     font-weight: 700;
 }
 /*** ---------END_FILE--------- ***/
 /*** CSS PROFILE ADMINISTRATEUR ***/
+
+/*** ------ ADD CSS PROFIL ------ **/
+
+.table-content-form .table-info-form {
+    background: #ccc;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    width: 30%;
+    height: 340px;
+    margin-top: 70px;
+    margin-right: 24px;
+}
+
+.table-info-form .item-logo img {
+    width: 100px;
+    border-radius: 80px;
+    margin-top: -30px;
+    height: 100px;
+}
+
+.table-info-form .item-forms.form-nom {
+    margin-top: 20px;
+    font-size: 23px;
+    font-weight: 700;
+    font-family: "Rubik", sans-serif;
+    color: #337ab7;
+    border-bottom: 2px solid;
+}
+
+.table-info-form .item-form {
+    margin-top: 8px;
+    border-radius: 20px;
+    background: #31708f;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+}
+/*** ------END CSS PROFIL------ **/
