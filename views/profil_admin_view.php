@@ -26,9 +26,11 @@
            <h2>Liste de tout les emploie du service <?= $donne['titre_admin'] ?></h2>
            <div class="box-list-profile">
            	<?php foreach ($_SESSION['MesEmploie'] as $donnees) : ?>
-				   <h3><?= $donnees['nom_emploie'] ?>
+              <div class="profil-contain col-md-3">
+				   <h3 class="profil-name"><?= $donnees['nom_emploie'] ?>
 				       <?= $donnees['prenom_emploie'] ?></h3>
-				   <h3><?= '<a href="controleur/controler_admin_formation.php?emploie='.$donnees['id_emploie'].'"><button type="button" class="btn btn-primary">'. $donnees['id_emploie']. ' Gérer'.'</button></a>' ?></h3>
+				   <div class="containeur"><?= '<a href="controleur/controler_admin_formation.php?emploie='.$donnees['id_emploie'].'"><img src="img/Profil/'.$donnees['id_emploie'].'.png" width="64" hieght="60"></a>' ?></div>
+           </div>
             <?php endforeach ?>
            </div>
            </div>
