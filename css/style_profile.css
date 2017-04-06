@@ -444,8 +444,8 @@ a.mail-dropdown {
 /*** ------ ADD CSS PROFIL ------ **/
 
 .table-content-form .table-info-form {
-    background: #ccc;
-    color: white;
+    background: #dff0d8;
+    color: #337ab7;
     border-radius: 20px;
     text-align: center;
     width: 30%;
@@ -466,15 +466,28 @@ a.mail-dropdown {
     font-size: 23px;
     font-weight: 700;
     font-family: "Rubik", sans-serif;
-    color: #337ab7;
+    color: #5bc0de;
     border-bottom: 2px solid;
 }
 
 .table-info-form .item-form {
     margin-top: 8px;
     border-radius: 20px;
-    background: #31708f;
+    background: #f5f5f5;
     border-right: 2px solid black;
     border-left: 2px solid black;
+}
+
+.table-info-form .item-form-valide {
+    color: black;
+    margin-top: 20px;
+    background: white;
+    border: 2px solid #5bc0de;
+    border-radius: 7px;
+}
+
+.pub .box-img {
+    width: 100%;
+    height: auto;
 }
 /*** ------END CSS PROFIL------ **/

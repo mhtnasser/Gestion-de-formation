@@ -11,7 +11,7 @@
         <ul>
               <li><?= $_SESSION['titre']  ?>    <span>Service</span></li>
               <li><?= $_SESSION['credit'] ?>    <span>Credit</span></li>
-              <li><?= $_SESSION['jour']   ?>    <span>Jour Disponible</span></li>
+              <li><?= $_SESSION['jour']   ?>    <span>Jour(s) Disponible</span></li>
               <li>
                   <form>
                   <input type="text" id="entre" onkeyup="showHint(this.value)">
@@ -31,15 +31,16 @@
   <div class="container">
   <div class="row">
     
-  <!--table de tout les formation a la quel un emploie est inscrit -->
+  <!--table de tout les formation a la quel un emploie est inscript -->
 <div class="col-md-8">
+<h3 class="title-main-form">Toutes les formations de <?= $_SESSION['nom'] ?></h3>
   <table class="table table-hover">
     <thead>
       <tr>
         <th>Nom</th>
-        <th>Formation</th>
-        <th>Statut</th>
-        <th>Envoie le</th>
+        <th>Formations</th>
+        <th>Statuts</th>
+        <th>Envoié le</th>
       </tr>
     </thead>
 
@@ -61,7 +62,7 @@
             echo "<td>Refuse</td>";
             break;
           case 3:
-            echo "<td>Effectuer</td>";
+            echo "<td>Effectué</td>";
             break;
           default:
             echo "error";
@@ -76,7 +77,9 @@
 </div>
   <!-- END table de tout les formation a la quel un emploie est inscrit -->
   <!-- ESPACE PUB -->
-  <div class="pub col-md-4"></div>
+  <div class="pub col-md-4">
+    <img src="img/pub.png" alt="IP-Formation" class="box-img">
+  </div>
   <!-- END ESPACE PUB -->
   <!--table de tout les formation -->
 <div class="col-md-12">
@@ -94,9 +97,9 @@
                   echo  '<div class="item-logo"> <img src="img/'.$formation['id_formation'].'.png" sizes="(max-width: 150px) 100vw, 150px"/></div>'.
                         '<div class="item-forms form-nom"> '.$formation['nom_formation'] .'</div>'.
                         '<div class="item-form" >'          .$formation['dure_formation'].'</div>'.
-                        '<div class="item-form" >'          .$formation['date_formation'].'</div>'.
-                        '<div class="item-form" >'          .$formation['lieux']         .'</div>'.
-                        '<div class="item-form" >'          .$formation['pre_requis']    .'</div>'.
+                        '<div class="item-form" ><i class="fa fa-calendar" aria-hidden="true"></i>'          .$formation['date_formation'].'</div>'.
+                        '<div class="item-form" ><i class="fa fa-map-marker" aria-hidden="true"></i>'          .$formation['lieux']         .'</div>'.
+                        '<div class="item-form" ><i class="fa fa-book" aria-hidden="true"></i>'          .$formation['pre_requis']    .'</div>'.
                         '<div class="item-form" >'          .$formation['prix_formation'].'</div>';
                         //boucle pour enleve le boutton demande pour les formation a la quel on ne deja inscript
                         foreach ($_SESSION['ma_formation'] as $donne)
@@ -112,7 +115,7 @@
                         {
                           echo '<div class="item-form-valide"><p>Deja inscrit</p></div>';
                         }else  {
-                          echo '<div class="item-form-valide"> '.'<a href="formation/'.$formation['id_formation'].'"><button type="button" class="btn btn-success">Demande</button></a>'."</div>";
+                          echo '<div class="item-form-demande"> '.'<a href="formation/'.$formation['id_formation'].'"><button type="button" class="btn btn-success">Demande</button></a>'."</div>";
                         }
 
                   $i=0;
