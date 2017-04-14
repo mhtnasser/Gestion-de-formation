@@ -23,13 +23,12 @@
           <input type="text" name="username" id="user" placeholder="Entrez votre Nom" value="<?php if(isset($_COOKIE['name_save'])){
             echo $_COOKIE['name_save'];
             } ?>">
-          <input type="password" name="password" placeholder="Entrez Votre mot de passe" value="<?php if(isset($_COOKIE['password_save'])){
-              echo $_COOKIE['password_save'];
-              } ?>">
+          <input type="password" name="password" placeholder="Entrez Votre mot de passe">
           <button type="submit" name="submit" >LOGIN</button>
           <div class="login-admin">
             Vous été admin :
-            <span><a href="home/admin"> Login </a></span>
+            <span><a href="home/admin"> Login </a></span><br>
+            <span><a href="recuperation.php?section= ">Mot de passe oublié</a></span>
           </div>
       </div>
     </div>
