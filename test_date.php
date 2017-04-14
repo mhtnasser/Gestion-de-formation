@@ -6,7 +6,7 @@ class Base {
 	public function connexion() {
 		try
 		{
-			$bdd = new PDO('mysql:host=localhost;dbname=gestionclub;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+			$bdd = new PDO('mysql:host=localhost;dbname=m2l;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 		}
 		catch(Exception $e)
@@ -42,21 +42,38 @@ $date->add($i);
 var_dump( $date->format('Y-m-d H:m:s'));*/
 
 //recupere la liste de tout les formation.
-    function listeFormation()
-    {
-    	$bdd = new Base();
-    	$bdd = $bdd->connexion();
+   $nb1 = 0;
+   $nb2 = 2;
 
-    	$req = $bdd->query('SELECT moment From evenements');
+	$bdd = new Base();
+	$bdd = $bdd->connexion();
 
-        $donnees = $req->fetchAll(PDO::FETCH_ASSOC);
-    	
-        return $donnees;
-    }
+	$count = $bdd->query("Call count_formation()");
+	var_dump($count->fetchAll());
 
-var_dump( listeFormation()); die();
+	$count->closeCursor();
+
+	$rep = $bdd->prepare("Call proc(:nb1, :nb2)");
+	$rep->setFetchMode(PDO::FETCH_ASSOC);
+	$rep->bindParam(":nb1", $nb1); 
+	$rep->bindParam(":nb2", $nb2);
+	$rep->execute();
 
 
+	  
+	$out = $rep->fetchAll();    // on recupere l'unique ligne de resultat  
+	var_dump($out);
+
+
+
+
+/*
+
+
+$stmt = odbc_prepare($bdd, 'CALL proc(?,?)');
+$res  = odbc_execute($stmt, array($nb1, $nb2));
+
+*/
 
 
 

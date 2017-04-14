@@ -18,14 +18,7 @@ if(isset($_POST['username']) AND isset($_POST['password'])){
 		    $pass_Majuscule = strtoupper($pass);
 		    $pass_sha = sha1($pass_Majuscule);
 
-
 		    //Vérification de indentifiants
-		   /* $req = $bdd->prepare('SELECT id FROM emploie WHERE nom = :pseudo AND mdp = :pass');
-		    $req->execute(
-		    	array(
-		        'pseudo' => $user_Majuscule,
-		        'pass' => $pass_sha));*/
-           
 	        $resultat = findUser($user_Majuscule, $pass_sha);
    
 		    if(!$resultat){
@@ -40,7 +33,6 @@ if(isset($_POST['username']) AND isset($_POST['password'])){
 				header('Location: controle_profil.php');
 
 				setcookie("name_save", $user, (time() + 3600), '/');  /* expire dans 1 heure */
-		    	setcookie("password_save", $pass, (time() + 3600), '/');  /* expire dans 1 heure */
 		    }
 
 		}

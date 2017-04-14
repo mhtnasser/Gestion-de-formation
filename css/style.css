@@ -12,7 +12,7 @@
   margin:   25px auto 50px;
   height:   300px;
   position: relative;
-  width:    975px;
+  width:    100%;
 }
 
 .profile-banner {
@@ -21,6 +21,7 @@
   position: absolute;
   top:      0;
   z-index:  1;
+  width: 100%;
 }
 
 .profile-picture img{
