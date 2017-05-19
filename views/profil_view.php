@@ -50,7 +50,7 @@
   <!--table de tout les formation a la quel un emploie est inscript -->
 <div class="col-md-8">
 <h3 class="title-main-form">Toutes les formations de <?= $_SESSION['nom'] ?></h3>
-  <table class="table table-hover">
+   <?php if(count($_SESSION['ma_formation']) != 0) { ?><table class="table table-hover">
     <thead>
       <tr>
         <th>Nom</th>
@@ -61,6 +61,7 @@
     </thead>
 
     <tbody>
+   
       <?php foreach ($_SESSION['ma_formation'] as $donne) : ?>
         <tr>
         <td><?= $donne['nom_p']?></td>
@@ -88,8 +89,11 @@
         <td><?= $donne['date_actuelle'] ?></td>
         </tr>
       <?php endforeach ?>
+      
     </tbody>
-  </table>
+  </table><?php } else {
+        echo $_SESSION['nom']." n'est insrit a aucune formation ! ";  
+        }?>
 </div>
   <!-- END table de tout les formation a la quel un emploie est inscrit -->
   <!-- ESPACE PUB -->
