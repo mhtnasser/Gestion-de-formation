@@ -1,0 +1,12 @@
+Page de récupération:
+	- Deamnde de l'adresse mail
+	- Sécurisation et vérification de la validitée de l'adresse mail
+	- Correspondance avec une autre adresse mail de la bdd
+	- si ok => Envoie d'un code par mail (mt_rand()*8)
+		BDD => Table "recuperation" (id, mail , code)
+	- Stockage du mail dans $_SESSION['recupmail']
+	- Stockage du mail dans $_SESSION['recupcode']
+	- Redirection vers la pahe d'etrée du code ($_GET['section'] ='code')
+	- Cheker correspondance code mail dans la bdd
+	- Si ok => Redirection vers la page de changement de mot de passe (+ confirmation du mdp) ($_GET['section']='mdpform')
+	- Si les deux mot de passe correspondent => hashage en sha1() et enregistrement dans la bdd 

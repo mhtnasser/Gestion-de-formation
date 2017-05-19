@@ -514,3 +514,46 @@ li.earch_item {
     list-style: none;
 }
 /*** ------END CSS PROFIL------ **/
+
+/*** ------ CSS COUR------ **/
+.head-main {
+    width: 100%;
+    margin-top: 25px;
+    background-color: #29a9df;
+    border: 5px #efefef solid;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.2), 1px 1px 4px rgba(0,0,0,0.3);
+    margin-bottom: 15px;
+}
+
+.content-logo a img {
+    padding-top: 20px;
+    float: right;
+    height: 148px;
+    width: 148px;
+}
+
+.header_main .profile-cour img {
+    background-position: center center;
+    background-size: cover;
+    border: 5px #efefef solid;
+    border-radius: 50%;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.2), 1px 1px 4px rgba(0,0,0,0.3);
+    height: 148px;
+    width: 148px;
+    z-index: 3;
+    display: inline-block;
+    vertical-align: top;
+}
+.profile-cour-descrip {
+  display: inline-block;
+  height: 148px;
+  width: 148px;
+  margin-left: 15px;
+}
+
+.profile-cour-descrip .profile-content {
+  font-family: "Rubik", sans-serif;
+  font-weight: 800;
+  font-size: 18px
+}
+/*** ------END CSS COUR------ **/
