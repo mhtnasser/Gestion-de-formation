@@ -2,7 +2,7 @@
 
 include('../data_base/data_base.php');
 
-class ManagerAdmin{
+class ManagerAdmin {
 
 	private $_bdd;
 
@@ -76,8 +76,6 @@ class ManagerAdmin{
 
 	public function accepte($id)
 	{
-
-        
 		//la date d’aujourd’hui au format Jour-Mois-Année
 		$dateDuJour = date('d-m-Y');
 
@@ -91,7 +89,6 @@ class ManagerAdmin{
 		//on ajouter a l'objet date Time l'objet date Interval 
 		$date->add($i);
 		$date_fin = $date->format('Y-m-d H:m:s');
-
 
 		$req = $this->_bdd->prepare('UPDATE for_active SET status = 1, date_act = :date_fin WHERE id = :id');
 		$req->execute(array(
