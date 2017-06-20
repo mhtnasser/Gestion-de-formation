@@ -1,7 +1,7 @@
 <?php
 
 if(!isset($_SESSION['id']) AND !isset($_SESSION['pseudo'])){
-	header('location: home');
+	header('location: index.php');
 	exit();
 }
 ?>

@@ -2,6 +2,6 @@
 
  if(!isset($_GET['cour']))
    {
-   	header('location: profil');
+   	header('location: profil.php');
    	
    }

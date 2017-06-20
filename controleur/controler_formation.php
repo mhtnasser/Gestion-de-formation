@@ -10,6 +10,7 @@ if(isset($_GET['Demande']))
 
 	$_SESSION['ma_formation'] = $my->getFormation($_SESSION['id']);
 
-    header('location: ../formation/'.$_GET['Demande'].'/'.$m);
+    header('location: ../formation.php?formation='.$_GET['Demande'].'&msg='.$m);
     //formation.php?formation='.$_GET['Demande'].'&msg='.$m
+    //formation/'.$_GET['Demande'].'/'.$m
 }

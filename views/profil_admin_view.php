@@ -2,7 +2,7 @@
  <div class="mail-box">
     <aside class="sm-side">
         <div class="user-head">
-            <a class="inbox-avatar" href="profil/admin">
+            <a class="inbox-avatar" href="index_admin.php">
                 <img  width="64" hieght="60" src="http://med.stanford.edu/employeerecognition/2013/30years/_jcr_content/main/panel_builder/panel_0/text_image_6.img.620.high.png">
             </a>
             <div class="user-name">

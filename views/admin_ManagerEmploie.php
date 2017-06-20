@@ -3,7 +3,7 @@
  <div class="mail-box">
     <aside class="sm-side">
         <div class="user-head">
-            <a class="inbox-avatar" href="profil/admin">
+            <a class="inbox-avatar" href="index_admin.php">
                 <img  width="64" hieght="60" src="http://med.stanford.edu/employeerecognition/2013/30years/_jcr_content/main/panel_builder/panel_0/text_image_6.img.620.high.png">
             </a>
             <div class="user-name">
@@ -15,7 +15,7 @@
         </div>
         <div class="inbox-body">
             <a href="controleur/logout_admin.php" class="btn btn-deconnexion">Deconnexion</a>
-            <a href="profil/admin" class="btn btn-retour">Retour</a>
+            <a href="index_admin.php" class="btn btn-retour">Retour</a>
         </div>
     </aside>
 
@@ -96,13 +96,16 @@
                               echo "<td> Demande </td>";
                               break;
                           case 1:
-                            echo "<td> valide </td>";
+                            echo "<td> Valide </td>";
                           break;
                           case 2:
-                            echo "<td> refuse </td>";
+                            echo "<td> Refuse </td>";
+                          break;
+                          case 3:
+                            echo "<td> Effectue </td>";
                           break;
                             default:
-                              echo "<td> pas de parametre </td>";
+                              echo "<td> Pas de parametre </td>";
                               break;
                            }
                         ?>

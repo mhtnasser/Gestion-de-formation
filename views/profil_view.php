@@ -36,7 +36,7 @@
     <ul ng-init="names = <?php echo htmlspecialchars($json); ?>" ng-show="query">
       <li class="earch_item" ng-repeat="x in names | filter:{nom_formation:query}">
         <div class="bg-info"> <p class="text-muted">
-<a href="formation/{{x.id_formation}}"><button type="button" class="hiden-btn btn btn-success">Demande</button></a>
+<a href="formation.php?formation={{x.id_formation}}"><button type="button" class="hiden-btn btn btn-success">Demande</button></a>
   <strong> Nom : </strong> {{x.nom_formation}}
   <strong> Dure : </strong>{{x.dure_formation}}
   <strong> Prix : </strong>{{x.prix_formation}}
@@ -73,7 +73,7 @@
             echo "<td>En Attente</td>";
             break;
           case 1:
-            echo "<td> ".'<a href="cour/'.$donne['id_active'].'"><button type="button" class="btn btn-primary">Valide</button></a>'."</td>";
+            echo "<td> ".'<a href="cour.php?cour='.$donne['id_active'].'"><button type="button" class="btn btn-primary">Valide</button></a>'."</td>";
             break;
           case 2:
             echo "<td>Refuse</td>";
@@ -165,7 +165,7 @@
             {
               echo '<div class="item-form-valide"><p>Deja inscrit</p></div>';
             }else  {
-              echo '<div class="item-form-demande"> '.'<a href="formation/'.$formation['id_formation'].'"><button type="button" class="btn btn-success">Demande</button></a>'."</div>";
+              echo '<div class="item-form-demande"> '.'<a href="formation.php?formation='.$formation['id_formation'].'"><button type="button" class="btn btn-success">Demande</button></a>'."</div>";
             }
 
       $i=0;

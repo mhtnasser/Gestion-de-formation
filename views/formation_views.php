@@ -20,7 +20,7 @@
 			 }else { 
 		 ?>
 		<h2><?= '<a href="controleur/controler_formation.php?Demande='.$reponse['id'].'">
-				<button type="button" class="btn btn-primary">Demande</button></a><a href="profil"><button type="button" class="btn btn-info">Retour</button></a>' ?></h2>
+				<button type="button" class="btn btn-primary">Demande</button></a><a href="profil.php"><button type="button" class="btn btn-info">Retour</button></a>' ?></h2>
 	<?php 
 			}
 		}

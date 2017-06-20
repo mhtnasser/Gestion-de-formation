@@ -10,7 +10,7 @@
 		<div class="header_main">	
 			<div class="head-main col-md-12 col-xs-12">
 				<div class="profile-cour">
-					<a href="home"><?= '<img src="img/Profil/'.$_SESSION['id'].'.png">' ?></a>
+					<a href="index.php"><?= '<img src="img/Profil/'.$_SESSION['id'].'.png">' ?></a>
 					<div class="profile-cour-descrip">
 						<h1 class="profile-content">Nom : <?= $_SESSION['nom'] ?></h1>
 						<h1 class="profile-content">PRENOM : <?= $_SESSION['prenom'] ?></h1>

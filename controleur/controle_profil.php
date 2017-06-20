@@ -16,4 +16,4 @@ $_SESSION['titre'] = $donnees['titre'];
 $_SESSION['listeFormation'] = $listeFormation;
 $_SESSION['ma_formation'] = $ma_formation;
 
-header('location: ../profil');
+header('location: ../profil.php');

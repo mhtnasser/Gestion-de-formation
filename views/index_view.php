@@ -27,7 +27,7 @@
           <button type="submit" name="submit" >LOGIN</button>
           <div class="login-admin">
             Vous été admin :
-            <span><a href="home/admin"> Login </a></span><br>
+            <span><a href="index_admin.php"> Login </a></span><br>
             <span><a href="recuperation.php?section= ">Mot de passe oublié</a></span>
           </div>
       </div>
